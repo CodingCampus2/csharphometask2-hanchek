@@ -9,11 +9,11 @@ namespace HomeworkTemplate
         {
             Func<Task2, string> TaskSolver = task =>
             {
-                // Your solution goes here
-                // You can get all needed inputs from task.[Property]
-                // Good luck!
+                string pad = "".PadLeft(Task2.Padding / 2, task.DecorativeSign);
+                string spaces = "".PadLeft(Task2.Padding / 2);
+                string balance = task.Balance.ToString("C2", new System.Globalization.CultureInfo("en-US"));
 
-                return "My answer";
+                return $"{pad}{spaces}{balance}{spaces}{pad}";
             };
 
             Task2.CheckSolver(TaskSolver);
